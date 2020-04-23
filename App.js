@@ -26,7 +26,7 @@ class WeatherDisplay extends React.Component {
     });
   }
   render() {
-    const weather = weatherData.weather;
+    const weather = this.state.weatherData.weather || null;
     if (!weatherData) return <div>Loading</div>;
     const iconUrl = "https://openweathermap.org/img/w/" + weather.icon + ".png";
     return (
